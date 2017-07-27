@@ -1,0 +1,13 @@
+WhiskerServer v2.0 - DEVICE DEFINITION FILE - DO NOT ALTER THIS LINE
+####################################################################
+# Visual Discrimination Frame Work 
+###################################################################
+ 
+ 
+# Box 0 definition
+line    0      box0    IRBEAM
+line    1      box0    HOUSELIGHT
+line    2      box0    TRAYLIGHT
+line    3      box0    PELLET
+display 0      box0    CAGEDISPLAY
+display 1      human   HUMANDISPLAY

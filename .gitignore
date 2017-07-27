@@ -1,0 +1,8 @@
+/__pycache__
+/.DS_Store
+/build
+/demo_task_results.db
+/dist
+/venv
+/venvtest
+/visualdiscrimination/__pycache__

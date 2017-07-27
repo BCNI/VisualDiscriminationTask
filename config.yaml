@@ -1,0 +1,115 @@
+# demo_config.yaml
+
+# The URL is of the SQLAlchemy type.
+# http://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls
+# Here we'll use a SQLite file. For bigger purposes, consider MySQL etc.
+
+database_url: sqlite:///demo_task_results.db
+
+server: 10.211.55.3
+# server: "windows-10" #wombatvmxp
+
+subject: "Test"
+session: 1
+screen_resolution:
+  width: 1024
+  height: 768
+overview_screen_resolution:
+  width: 1024
+  height: 768
+stimuli_presentation_millis: 10000 # how long are the stimuli on the screen for
+iti_millis: 5000 # inter trial interval
+feedback_millis: 3000
+feedback_flash_millis: 250
+timeout_millis: 5000
+num_trials: 250
+max_task_time_millis: 3600000
+stimuli:
+  - key: "star"
+    file: "star.bmp"
+  - key: "oval"
+    file: "oval.bmp"
+  - key: "speech"
+    file: "Speech.bmp"
+  - key: "diamond"
+    file: "Diamond.bmp"
+  - key: "heart"
+    file: "Heart.bmp"
+
+pairings:
+  - key: "AvB"
+    stimuli:
+      - key: "oval"
+        reward_ratio: 1
+        extinction_rate: 0.01
+      - key: "star"
+        reward_ratio: 0
+    enabled: Yes
+    frequency:
+      appearance_ratio: 0.25
+  - key: "BvA"
+    stimuli:
+      - key: "star"
+        reward_ratio: 0
+      - key: "oval"
+        reward_ratio: 1
+        extinction_rate: 0.01
+    enabled: Yes
+    frequency:
+      appearance_ratio: 0.25
+  - key: "CvD"
+    stimuli:
+      - key: "speech"
+        reward_ratio: 0.5
+      - key: "diamond"
+        reward_ratio: 0.5
+    enabled: Yes
+    frequency:
+      appearance_ratio: 0.25
+  - key: "DvC"
+    stimuli:
+      - key: "diamond"
+        reward_ratio: 0.5
+      - key: "speech"
+        reward_ratio: 0.5
+    enabled: Yes
+    frequency:
+      appearance_ratio: 0.25
+  - key: "XvX"
+    stimuli:
+    - key: "heart"
+      reward_ratio: 1
+    - key: "heart"
+      reward_ratio: 1
+    enabled: Yes
+    frequency:
+      fixed_rate: 4
+      fixed_rate_start: 3
+
+conditions:
+  - type: "trials"
+    trials: 30
+    changes:
+      - key: "AvB"
+        frequency:
+          trials: 2
+  - type: "consecutive rewarded responses"
+    responses: 5
+    changes:
+      - key: "XvX"
+        enabled: No
+  - type: "total rewarded responses"
+    responses: 5
+    changes: 
+      - key: "CvD"
+        stimuli: 
+          - key: "speech"
+            reward_ratio: 0
+  - type: "total unrewarded responses"
+    responses: 5
+    changes: 
+      - key: "CvD"
+        stimuli: 
+          - key: "diamond"
+            reward_ratio: 1
+            
