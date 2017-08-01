@@ -43,9 +43,25 @@ The task expects that any stimuli defined in the config file are present as Bitm
 ## Installing the Task
 To run this task you will need python installed. Check whether it is installed before going any further. 
 
-Ensure you hve pip installed as well. 
+Ensure you have pip installed. It is usually installed with Python. 
 
- You can [Download Python Directly](https://www.python.org/downloads/)
+You can [Download Python Directly](https://www.python.org/downloads/)
+
+The following command will install the task:
+
+    pip install visualdiscriminationtask
+
+Incase a new version is released the following command will upgrade an already installed version
+
+    pip install visualdiscriminationtask --upgrade
+
+Once installed with pip you can run the task using the command:
+
+    visualdiscrimination
+
+You can also download the source code from (https://github.com/BCNI/VisualDiscriminationTask) and run the task directly from the directory using the command:
+
+    python visualdiscrimination
 
 ## Config file
 
