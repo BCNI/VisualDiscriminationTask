@@ -37,7 +37,7 @@ Example:
     display 0      box0    CAGEDISPLAY
     display 1      human   HUMANDISPLAY
 
-###Media
+### Media
 The task expects that any stimuli defined in the config file are present as Bitmap images in the Whisker Server Media directory. Read about [setting that directory](http://egret.psychol.cam.ac.uk/whisker/help/WhiskerHelp/console_setmultimediafolder.htm) in the Whisker manual. Warning! Not all BMP files are equal, and Whisker does not load 32bit bitmaps. Corel PaintShop Pro is recommended to create them.
 
 ## Installing the Task
