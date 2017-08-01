@@ -344,8 +344,7 @@ class VisualDiscriminationTask(WhiskerTask):
             if event=="stimuli_selection_timeout":
                 self.set_state("iti")
                 whisker.display_blank("screen")
-                whisker.timer_set_event("feedback",config.feedback_millis,0)
-            TODO  set up iti timer
+                whisker.timer_set_event("stimuli_selection",config.iti_millis)
                 self.correctResponse=False
             else:
                 self.set_state("feedback")
