@@ -218,7 +218,6 @@ class VisualDiscriminationTask(WhiskerTask):
                     print_conditional_change_effect(chng,future_tense=True)
         log.info("--------")
 
-        whisker.claim_audio(0,alias="speakers")
         whisker.timer_set_event("stimuli_selection",config.iti_millis)
         whisker.timer_set_event("task_time_out",config.max_task_time_millis)
         whisker.claim_line(device="HOUSELIGHT",group="box0",output=True,alias="house_lights")
@@ -305,7 +304,6 @@ class VisualDiscriminationTask(WhiskerTask):
         config=self.config
         print("Event: {e} (timestamp {t}, real time {n})".format(
             e=event, t=timestamp, n=now.isoformat()))
-        whisker.audio_play_wav("speakers","13635__traveler__cork.wav")
         if event=="flash":
             if self.flashCount%2==1:
                 pen=Pen(colour=BLACK)
