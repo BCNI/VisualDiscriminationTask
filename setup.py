@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='visualdiscriminationtask',
     description='A Visual Discrimination Task Whisker client',
-    version='0.1.3',
+    version='0.1.4',
     licence="MIT",
     keywords="Whisker Visual Discrimination",
     install_requires=[
